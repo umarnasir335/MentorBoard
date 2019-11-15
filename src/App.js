@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import './App.css';
 import Navbar from './Components/Navbar';
-//import Activities from './Activities';
+import Activities from './Components/Activities';
 //import Messages from './Messages';
 //import Schedule from './Schedule';
 //import Tutors from './Tutors';
@@ -19,12 +19,13 @@ function App() {
       <header className="App-header">
       <h1> MentorBoard</h1>
       <Switch>
-        <Route path="/" component={Navbar}/>
+        <Route exact path="/" component={Navbar}/>
+        <Route path="/activities" component={Activities}/>
         </Switch>
       </header>
     </div>
     </Router>
   );
-}
+  }
 
 export default App;
