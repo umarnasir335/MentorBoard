@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import CourseItem from './courses/CourseItem'
+import Courses from './courses/Courses'
 
 export class Activities extends Component {
     render() {
         return (
             <div>
-               <CourseItem/>
+               <Courses />
             </div>
         )
     }

@@ -20,7 +20,9 @@ function App() {
       <h1> MentorBoard</h1>
       <Switch>
         <Route exact path="/" component={Navbar}/>
+        <div className = 'container'> 
         <Route path="/activities" component={Activities}/>
+        </div>
         </Switch>
       </header>
     </div>
