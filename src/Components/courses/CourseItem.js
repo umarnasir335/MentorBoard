@@ -7,49 +7,72 @@ import IconButton from '@material-ui/core/IconButton';
 import InfoRoundedIcon from '@material-ui/icons/InfoRounded';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import Courses from './Courses';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+import ButtonBase from '@material-ui/core/ButtonBase';
 
 const CourseItem = props => {
       const {key, image_url,class_name,class_type,class_time} = props.course;
       const useStyles = makeStyles(theme => ({
         root: {
-          display: 'flex',
-          flexWrap: 'wrap',
-          justifyContent: 'space-around',
-          overflow: 'hidden',
-          backgroundColor: '#282c34',
+          flexGrow: 1,
         },
-        gridList: {
-          width: 300,
-          height: 450,
-         overflowY: 'auto',
+        paper: {
+          padding: theme.spacing(2),
+          margin: 'auto',
+          maxWidth: 500,
         },
-        icon: {
-          color: 'white',
+        image: {
+          width: 128,
+          height: 128,
+        },
+        img: {
+          margin: 'auto',
+          display: 'block',
+          maxWidth: '100%',
+          maxHeight: '100%',
         },
       }));
       const style = useStyles();
 
         return (
-           //<div className = 'card text-center' style = {useStyles}>
-           //    <h3>{class_name}</h3>
-           //    <h4>{class_time}</h4>
-           //    <h4>{class_type}</h4>
-           //</div>
+          <div className={style.root}>
+          <Paper className={style.paper}>
+            <Grid container spacing={2}>
+              <Grid item>
+                <ButtonBase className={style.image}>
+                  <img className={style.img} alt="complex" src={image_url} />
+                </ButtonBase>
+              </Grid>
+              <Grid item xs={12} sm container>
+                <Grid item xs container direction="column" spacing={2}>
+                  <Grid item xs>
+                    <Typography gutterBottom variant="subtitle1">
+                      {class_name}
+                    </Typography>
+                    <Typography variant="body2" gutterBottom>
+                      {class_type}
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary">
+                      {key}
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography variant="body2" style={{ cursor: 'pointer' }}>
+                      More
+                    </Typography>
+                  </Grid>
+                </Grid>
+                <Grid item>
+                  <Typography variant="subtitle1"></Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Paper>
+        </div>
 
-        <GridList cellHeight={180} className={style.root}>
-          <GridListTile key={key} className={style.gridList}>
-            <img src={image_url} alt={'alt'} />
-            <GridListTileBar
-              title={class_name}
-              subtitle={<span>{class_type}</span>} 
-              actionIcon={
-                <IconButton aria-label={`info about ${class_time}`}className={style.icon}>
-                  <InfoRoundedIcon />
-                </IconButton>}
-            />
-          </GridListTile>
-        )}
-      </GridList>
+
         )
     }
 
