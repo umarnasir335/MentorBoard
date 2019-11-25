@@ -17,12 +17,12 @@ function App() {
     <Router>
     <div className="App">
       <header className="App-header">
-      <h1> MentorBoard</h1>
+      <h1>MentorBoard</h1>
       <Switch>
         <Route exact path="/" component={Navbar}/>
         </Switch>
       </header>
-      <div className = "App-body">
+      <div>
         <Switch>
         <Route path="/activities" component={Activities}/>  
         </Switch>
