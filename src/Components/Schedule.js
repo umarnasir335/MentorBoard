@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { render } from 'react-dom';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
+import Navbar from './Navbar'
 //import './style.css';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 
@@ -28,14 +29,14 @@ const events = [
 
     {
         id: 2,
-        title: 'DTS STARTS',
-        start: new Date(2019, 2, 13, 0, 0, 0),
-        end: new Date(2019, 2, 20, 0, 0, 0),
+        title: 'Sprint Starts',
+        start: new Date(2019, 9, 13, 0, 0, 0),
+        end: new Date(2019, 9, 20, 0, 0, 0),
     },
 
     {
         id: 3,
-        title: 'DTS ENDS',
+        title: 'Sprint ends',
         start: new Date(2019, 10, 6, 0, 0, 0),
         end: new Date(2019, 10, 13, 0, 0, 0),
     },
@@ -103,6 +104,7 @@ const events = [
 render() {
     return (
       <div>
+           <Navbar style={{ height: '500pt'}} />
         <p>
           A test for the React Big Calendar.
         </p>

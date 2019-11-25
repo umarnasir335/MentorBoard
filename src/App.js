@@ -21,7 +21,7 @@ function App() {
       <h1> MentorBoard</h1>
       <Schedule></Schedule>
       <Switch>
-        <Route exact path="/" component={Navbar}/>
+        <Route exact path="/home" component={Navbar}/>
         </Switch>
       </header>
       <div className = "App-body">
