@@ -9,7 +9,9 @@ export class Activities extends Component {
                <header >
                 <Navbar />
                </header>
+               <div className= "App-body">
                <Courses />
+               </div>
             </div>
         )
     }
