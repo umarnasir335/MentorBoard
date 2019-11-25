@@ -22,10 +22,10 @@ function App() {
         <Route exact path="/" component={Navbar}/>
       </Switch>
       </header>
-      <div>
+      <div className= "App-body">
         <Switch>
-        <Route path="/activities" component={Activities}/>  
-        <Route path="/Schedule" component={Schedule}/>  
+          <Route path="/activities" component={Activities}/>  
+          <Route path="/Schedule" component={Schedule}/>  
         {/* <Route path="/Messages" component={Messages}/>  
         <Route path="/Tutors" component={Tutors}/>   */}
         </Switch>

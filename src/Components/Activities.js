@@ -7,7 +7,7 @@ export class Activities extends Component {
         return (
             <div >
                <header >
-                 <Navbar />
+                <Navbar />
                </header>
                <Courses />
             </div>
