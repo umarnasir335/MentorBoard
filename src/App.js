@@ -9,9 +9,8 @@ import './App.css';
 import Navbar from './Components/Navbar';
 import Activities from './Components/Activities';
 import Schedule from './Components/Schedule';
-//import Messages from './Messages';
-//import Schedule from './Schedule';
-//import Tutors from './Tutors';
+// import Messages from './Components/Messages';
+// import Tutors from './Components/Tutors';
 
 function App() {
   return (
@@ -19,19 +18,16 @@ function App() {
     <div className="App">
       <header className="App-header">
       <h1> MentorBoard</h1>
-      <Schedule></Schedule>
       <Switch>
-        <Route exact path="/home" component={Navbar}/>
-        </Switch>
+        <Route exact path="/" component={Navbar}/>
+      </Switch>
       </header>
       <div className = "App-body">
         <Switch>
         <Route path="/activities" component={Activities}/>  
-        </Switch>
-      </div>
-      <div>
-        <Switch>
-        <Route path="/schedule" component={Schedule}/>  
+        <Route path="/Schedule" component={Schedule}/>  
+        {/* <Route path="/Messages" component={Messages}/>  
+        <Route path="/Tutors" component={Tutors}/>   */}
         </Switch>
       </div>
     </div>
