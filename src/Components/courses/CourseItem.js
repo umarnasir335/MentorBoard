@@ -17,11 +17,19 @@ const CourseItem = props => {
       const useStyles = makeStyles(theme => ({
         root: {
           flexGrow: 1,
+          
         },
         paper: {
           padding: theme.spacing(2),
           margin: 'auto',
           maxWidth: 500,
+          background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+          alignItems: 'flex-start',
+          boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+          color: 'white', 
+          height: 'auto',
+          // padding: 'auto',
+
         },
         image: {
           width: 128,
@@ -39,17 +47,17 @@ const CourseItem = props => {
         return (
           <div className={style.root}>
           <Paper className={style.paper}>
-            <Grid container spacing={2}>
-              <Grid item>
+            <Grid container  spacing={2}>
+              <Grid item >
                 <ButtonBase className={style.image}>
                   <img className={style.img} alt="complex" src={image_url} />
                 </ButtonBase>
               </Grid>
-              <Grid item xs={12} sm container>
-                <Grid item xs container direction="column" spacing={2}>
-                  <Grid item xs>
+              <Grid item xs={12} sm container direction="column"  >
+                <Grid item xs container direction="row" spacing={2}  >
+                  <Grid item xs >
                     <Typography gutterBottom variant="subtitle1">
-                      {class_name}
+                     <b> {class_name}</b>
                     </Typography>
                     <Typography variant="body2" gutterBottom>
                       {class_type}
@@ -58,12 +66,12 @@ const CourseItem = props => {
                       {key}
                     </Typography>
                   </Grid>
-                  <Grid item>
+                </Grid>
+                  <Grid item >
                     <Typography variant="body2" style={{ cursor: 'pointer' }}>
                       More
                     </Typography>
                   </Grid>
-                </Grid>
                 <Grid item>
                   <Typography variant="subtitle1"></Typography>
                 </Grid>
