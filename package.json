@@ -2,6 +2,7 @@
   "name": "mbdraft1",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://umarnasir335.github.io/mentor-board-team",
   "dependencies": {
     "@material-ui/core": "^4.6.1",
     "@material-ui/icons": "^4.5.1",
@@ -16,6 +17,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
